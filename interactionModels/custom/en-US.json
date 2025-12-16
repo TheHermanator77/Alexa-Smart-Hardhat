@@ -1,0 +1,162 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "HeadlampState",
+              "elicitationRequired": true,
+              "type": "HeadlampState",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1274304232407.935863653134"
+              }
+            }
+          ],
+          "name": "ToggleHeadlampIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "GetHelmetStatusIntent",
+          "samples": [
+            "anything detected",
+            "report status",
+            "status report",
+            "get helmet status",
+            "what did the helmet detect",
+            "did my helmet detect anything",
+            "how is my hard hat",
+            "check helmet status",
+            "what is the helmet status"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "ReportImpactIntent",
+          "samples": [
+            "simulate an impact",
+            "report a test impact",
+            "log an impact",
+            "report an impact"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "HeadlampState",
+              "type": "HeadlampState",
+              "samples": [
+                "Off",
+                "On"
+              ]
+            }
+          ],
+          "name": "ToggleHeadlampIntent",
+          "samples": [
+            "turn the headlamp {HeadlampState}",
+            "turn helmet light {HeadlampState}",
+            "set headlamp to {HeadlampState}",
+            "set light to {HeadlampState}",
+            "light {HeadlampState}",
+            "turn headlamp {HeadlampState}",
+            "Turn the helmet light {HeadlampState}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ResetHelmetIntent",
+          "samples": [
+            "clear helmet",
+            "clear data",
+            "clear helmet logs",
+            "reset helmet",
+            "reset data",
+            "clear helmet data",
+            "reset helmet data"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nickname",
+              "type": "AMAZON.Person"
+            }
+          ],
+          "name": "UpdateNicknameIntent",
+          "samples": [
+            "set nickname to {nickname}",
+            "Change helmet nickname to {nickname}",
+            "Change nickname to {nickname}",
+            "Set helmet nickname to {nickname}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "Disable"
+                ],
+                "value": "Off"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Enable"
+                ],
+                "value": "On"
+              }
+            }
+          ],
+          "name": "HeadlampState"
+        }
+      ],
+      "invocationName": "smart hard hat"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please specify on or off"
+          }
+        ],
+        "id": "Elicit.Slot.1274304232407.935863653134"
+      }
+    ]
+  }
+}
